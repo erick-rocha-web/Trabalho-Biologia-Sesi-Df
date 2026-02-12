@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #0d2b5c 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #102a57 0%, transparent 40%),
+        linear-gradient(180deg, #081b3a 0%, #07152e 100%);
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: #0d2b5c;
+    z-index: 10;
+}
+
+span{
+    color: rgb(253, 139, 0);
+}
+
+.logo-rodape1 :hover{
+    width: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.logo-rodape2 :hover{
+    width: 60px;
+    transition: 0.3s ease-in-out; 
+}
+
+section{
+    scroll-margin-top: 90px;
+}
+.header-box{
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a, .p {
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #bcbcbc;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+a:hover{
+    color: aqua;
+    transition: 0.5s;
+}
+
+.titulo-principal {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17%;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+.divisor-secao{
+    transform: translateY(70px);
+}
+.names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    color: #ffffff;
+}
+
+.carousel {
+    position: relative;
+    height: 800px;
+    width: 600px;
+    display: flex;
+    bottom: 160px;
+    margin: auto;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.carousel {
+    transform: rotate(90deg);
+}
+
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 600px;   /* igual ao width do .carousel */
+    height: 800px;  /* igual ao height do .carousel */
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* ===========================
+   FOOTER (PROFISSIONAL)
+   =========================== */
+
+footer {
+  background-color: #0d2b5c;
+  color: #bcbcbc;
+  padding: 28px 16px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.footer-info p {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.footer-small {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.footer-title {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bcbcbc;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 0; /* evita herdar margin-top:20px do seu CSS global */
+}
+
+.footer-link:hover {
+  color: aqua;
+  transition: 0.3s;
+}
+
+.footer-link img {
+  display: block;
+  opacity: 0.9;
+}
+
+.footer-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-cta:hover {
+  border-color: aqua;
+  color: aqua;
+  transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-info p {
+    font-size: 16px;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+}
