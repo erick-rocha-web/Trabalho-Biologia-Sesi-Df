@@ -74,6 +74,7 @@ a:hover{
     font-size: 60px;
     color: #ffffff;
     text-align: center;
+    padding-bottom: 250px;
 }
 .divisor-secao{
     transform: translateY(70px);
@@ -84,37 +85,34 @@ a:hover{
     align-items: center;
     font-size: 30px;
     margin-top: 90px;
-    margin-bottom: 70px;
+    margin-bottom: -85px;
     color: #ffffff;
 }
 
 .carousel {
-    position: relative;
-    height: 800px;
-    width: 600px;
-    display: flex;
-    bottom: 160px;
-    margin: auto;
-    margin-top: 10px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-.carousel {
-    transform: rotate(90deg);
+  position: relative;
+
+  width: 600px;
+  height: 800px;
+
+  display: flex;
+  margin: 0 auto 0;
+  overflow: hidden;
+  border-radius: 20px;
+
+  transform: rotate(90deg);
 }
 
-
+.carousel-track img {
+  width: 600px;
+  height: 800px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-.carousel-track img {
-    width: 600px;   /* igual ao width do .carousel */
-    height: 800px;  /* igual ao height do .carousel */
-    flex-shrink: 0;
-    object-fit: cover;
 }
 
 .carousel button {
@@ -232,6 +230,108 @@ footer {
   }
 
   .footer-links {
+    width: 100%;
+  }
+}
+/* ===========================
+   RESPONSIVO (CELULAR/TABLET)
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .header-box {
+    flex-wrap: wrap;          /* quebra linha */
+    justify-content: center;
+    gap: 14px;                /* reduz espaço */
+    padding: 6px 0;
+  }
+
+  .p {
+    display: none;            /* tira os separadores | e || */
+  }
+
+  .header-box a {
+    margin-top: 0;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.15);
+  }
+
+  /* Título principal */
+  .titulo-principal {
+    margin-top: 120px;        /* espaço pro header */
+    width: 92%;
+    font-size: 34px;
+    padding-bottom: 60px;
+  }
+
+  .titulo-principal h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  /* Seções e títulos */
+  section {
+    scroll-margin-top: 140px; /* header ocupa mais no mobile */
+  }
+
+  .names {
+    font-size: 22px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Divisor */
+  .divisor-secao {
+    transform: translateY(0); /* remove deslocamento estranho */
+    margin: 18px 0;
+  }
+
+  /* Carrossel no mobile */
+  .carousel {
+    width: 92vw;              /* ocupa a tela */
+    max-width: 360px;
+    height: 60vh;             /* adapta ao tamanho da tela */
+    max-height: 520px;
+
+    transform: none;          /* no mobile NÃO gira */
+  }
+
+  .carousel-track img {
+    width: 92vw;
+    max-width: 360px;
+    height: 60vh;
+    max-height: 520px;
+    object-fit: cover;
+  }
+
+  .carousel button {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+
+  /* Footer já está ok, só reduzir textos */
+  .footer-info p {
+    font-size: 15px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .footer-cta {
     width: 100%;
   }
 }
